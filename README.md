@@ -3,7 +3,7 @@ Configuración de librería en angular para subir archivo .tgz
 
 
 ## ng-packagr 
-es una biblioteca que permite compilar y empaquetar una biblioteca de ### TypeScript ### en formato de paquete angular.
+es una biblioteca que permite compilar y empaquetar una biblioteca de TypeScript en formato de paquete angular.
 lo usaremos para sacar lo componentes de nuestro proyecto de CLI y empaquetarlos en un formato que pueda usarse dentro de 
 otras aplicaciones angular.
 
