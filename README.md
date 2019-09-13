@@ -19,14 +19,14 @@ segun ng-packagr, tendremos que agregar dos archivos nuevos, estos archivos se c
 
 en la raiz de nuestro proyecto creamos un archivo llamado "ng-package.json" y dentro de el agregamos lo siguiente:
 
-`
+```
 { 
   "$ schema": "./node_modules/ng-packagr/ng-package.schema.json", 
   "lib": { 
     "entryFile": "public_api.ts" 
   } 
 }
-`
+```
 
 luego de nuevo en la raiz de nuestro proyecto creamos un archivo llamado "public_api.ts"  en donde exportamos los componentes y archivos
 que seran empaquetados y que se usaran en otras aplicaciones angular.
@@ -41,7 +41,7 @@ export * from './src/app/app.module';
 Ahora agregaremos un package script a nuestro package.json para indicar que  ng-packagr vamos a usar, en este caso usaremos en 
 ng-package.json que creamos anteriormente. ademas cambiamos el atributo private a false para que asi pueda publicar su biblioteca cuando lo nesecite.
 
-``
+```
 "scripts": { 
   "ng": "ng", 
   "start": "ng serve", 
@@ -54,7 +54,7 @@ ng-package.json que creamos anteriormente. ademas cambiamos el atributo private 
 " private ": false
 
 ...
-``
+```
 
 
 ## CONFIGURACION DE NEXUS CON NPM
