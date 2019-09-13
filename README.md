@@ -33,7 +33,7 @@ que seran empaquetados y que se usaran en otras aplicaciones angular.
 
 para nuestro ejemplo exportaremos en app.module.
 
-export * from './src/app/app.module';
+```export * from './src/app/app.module';```
 
 ## paso 3.
 
@@ -76,7 +76,7 @@ esto con el fin de que nos permita subir  nuestros proyectos en el repositorio d
 
 en la raiz de nuestro proyecto creamos un archivo con el siguiente nombre ".npmrc" y pondremos lo siguiente:
 
-registry=http://nexus.softwareosr.com/repository/npm-private/
+```registry=http://nexus.softwareosr.com/repository/npm-private/```
 
 
 
@@ -85,7 +85,7 @@ registry=http://nexus.softwareosr.com/repository/npm-private/
 
 En la terminal ejecutamos el siguiente comando:
 
-echo -n 'myuser:@user' | openssl base64
+```echo -n 'myuser:@user' | openssl base64```
 
 en donde "@user" es el nombre de usuario de nexus.
 esto nos devolvera un hash en base64 para las credenciales con repositorio de nexus, para que la conexion sea efectiva.
@@ -95,7 +95,7 @@ esto nos devolvera un hash en base64 para las credenciales con repositorio de ne
 
 volviendo a nuetro archivo ".npmrc" y agregamos:
 
-_auth=hash
+```_auth=hash```
 
 en donde "hash" es el valor que nos retorno en el paso anterior.
 
@@ -116,8 +116,8 @@ de nuestro proyecto. Esta es nuestra blibioteca de componentes.
 ## PUBLICAR BIBLIOTECAS EN NEXUS
 
 ya con los pasos anteriores terminados ejecutamos en la terminal el siguiente comando.
-
+```
 npm publish --registry http://nexus.softwareosr.com/repository/npm-private/
 npm config set registry https://registry.npmjs.com/
-
+```
 y ya con esto deberia estar publicado nuestra biblioteca en nexus.
