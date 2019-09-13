@@ -150,3 +150,5 @@ npm config set registry https://registry.npmjs.com/
   ```
  
 y ya con esto deberia estar publicado nuestra biblioteca en nexus.
+
+En la plantilla antes de instalar la libreria en el package.json el private debe estar en false
