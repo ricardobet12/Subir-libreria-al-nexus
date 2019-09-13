@@ -64,14 +64,14 @@ ng-package.json que creamos anteriormente. ademas cambiamos el atributo private 
 ## paso 4.
 
 en el archivo "package.json" agregarmos lo siguiente:
-`
+```
 {
   ... ,
   "publishConfig": {
     "registry": "http://nexus.softwareosr.com/repository/npm-private/"
   }
 }
-`
+```
 esto con el fin de que nos permita subir  nuestros proyectos en el repositorio de nexus.
 
 ## paso 5.
@@ -107,12 +107,30 @@ en donde "hash" es el valor que nos retorno en el paso anterior.
 en la terminal y ubicados en la raiz de nuestro proyecto ejecutamos el comando "npm addUser", debera ingresar el nombre de usuario, clave y correo correspondientes 
 a su cuenta de nexus.
 
-
 ## CREANDO NUESTRO PAQUETE
 
 luego de realizar los pasos anteriores ejecutamos en nuestra terminal "ng build", una vez que el proceso se haya completado, encontraremos una caperta llamada "dist" en la raiz 
 de nuestro proyecto. Esta es nuestra blibioteca de componentes.
 
+
+## Paso 9
+
+En la ruta principal del proyecto contruimos la libreria
+```
+ng build "nombre-de-la-libreria"
+```
+## Paso 10
+Nos dirigimos a a la ruta /dist/"nombre-de-la-libreria" y digitamos el comando
+```
+npm pack
+```
+en la carpeta dist nos debe aparecer un archivo .tgz
+## Paso 11
+
+Nos salimos del dist y para subir el archivo al nexus solo debemos digitar el siguiente comando:
+```
+npm publish dist/registrar-valores/osr-registrar-valores-0.0.22.tgz 
+```
 
 
 ## PUBLICAR BIBLIOTECAS EN NEXUS
@@ -122,9 +140,13 @@ ya con los pasos anteriores terminados ejecutamos en la terminal el siguiente co
 npm config set registry https://registry.npmjs.com/
 ```
 
-Para descargar
- npm config set registry http://nexus.softwareosr.com/repository/npm-group/      
- Para publicar
+## Para descargar
+```
+ npm config set registry http://nexus.softwareosr.com/repository/npm-group/   
+ ```
+ ## Para publicar
+ ```
   npm config set registry http://nexus.softwareosr.com/repository/npm-private/
+  ```
  
 y ya con esto deberia estar publicado nuestra biblioteca en nexus.
