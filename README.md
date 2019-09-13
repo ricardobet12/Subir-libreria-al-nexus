@@ -119,7 +119,12 @@ de nuestro proyecto. Esta es nuestra blibioteca de componentes.
 
 ya con los pasos anteriores terminados ejecutamos en la terminal el siguiente comando.
 ```
-npm publish --registry http://nexus.softwareosr.com/repository/npm-private/
 npm config set registry https://registry.npmjs.com/
 ```
+
+Para descargar
+ npm config set registry http://nexus.softwareosr.com/repository/npm-group/      
+ Para publicar
+  npm config set registry http://nexus.softwareosr.com/repository/npm-private/
+ 
 y ya con esto deberia estar publicado nuestra biblioteca en nexus.
