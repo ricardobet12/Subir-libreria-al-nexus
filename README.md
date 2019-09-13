@@ -3,7 +3,7 @@ Configuración de librería en angular para subir archivo .tgz
 
 
 ## ng-packagr 
-es una biblioteca que permite compilar y empaquetar una biblioteca de TypeScript en formato de paquete angular.
+es una biblioteca que permite compilar y empaquetar una biblioteca de ### TypeScript ### en formato de paquete angular.
 lo usaremos para sacar lo componentes de nuestro proyecto de CLI y empaquetarlos en un formato que pueda usarse dentro de 
 otras aplicaciones angular.
 
@@ -12,8 +12,10 @@ otras aplicaciones angular.
 en la terminal y ubicados en la raiz de nuestro proyecto ejecutamos el comando " npm install -D ng-packagr"  esto descargara
 ng-packagr y lo declarara como parte de devDependency de nuestro proyecto en el  archivo package.json.
 
-segun ng-packagr, tendremos que agregar dos archivos nuevos, estos archivos se crearan en la raiz de nuestro proyecto,
+segun ng-packagr, tendremos que agregar dos archivos nuevos, estos archivos se crearan en la raiz de nuestro proyecto.
+```
 "ng-package.json" y "public_api.ts".
+```
 
 ## paso 2
 
