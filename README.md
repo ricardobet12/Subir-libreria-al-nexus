@@ -81,28 +81,7 @@ en la raiz de nuestro proyecto creamos un archivo con el siguiente nombre ".npmr
 ```registry=http://nexus.softwareosr.com/repository/npm-private/```
 
 
-
 ## paso 6.
-
-
-En la terminal ejecutamos el siguiente comando:
-
-```echo -n 'myuser:@user' | openssl base64```
-
-en donde "@user" es el nombre de usuario de nexus.
-esto nos devolvera un hash en base64 para las credenciales con repositorio de nexus, para que la conexion sea efectiva.
-
-
-## paso 7.
-
-volviendo a nuetro archivo ".npmrc" y agregamos:
-
-```_auth=hash```
-
-en donde "hash" es el valor que nos retorno en el paso anterior.
-
-
-## paso 8.
 
 en la terminal y ubicados en la raiz de nuestro proyecto ejecutamos el comando "npm addUser", debera ingresar el nombre de usuario, clave y correo correspondientes 
 a su cuenta de nexus.
@@ -113,19 +92,19 @@ luego de realizar los pasos anteriores ejecutamos en nuestra terminal "ng build"
 de nuestro proyecto. Esta es nuestra blibioteca de componentes.
 
 
-## Paso 9
+## Paso 7
 
 En la ruta principal del proyecto contruimos la libreria
 ```
 ng build "nombre-de-la-libreria"
 ```
-## Paso 10
+## Paso 8
 Nos dirigimos a a la ruta /dist/"nombre-de-la-libreria" y digitamos el comando
 ```
 npm pack
 ```
 en la carpeta dist nos debe aparecer un archivo .tgz
-## Paso 11
+## Paso 9
 
 Nos salimos del dist y para subir el archivo al nexus solo debemos digitar el siguiente comando:
 ```
